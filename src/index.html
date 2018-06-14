@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrap"></div>
+    <script id="data" type="text/x-handlebars-template">
+        <ul>
+            {{#each this}}
+            <li>
+                <span>{{title}}</span>
+                <span>{{name}}</span>
+                <span>{{price}}</span>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+    <script src="js/libs/require.js"></script>
+    <script>
+        require(['./js/main.js'], function() {
+            require(['index']);
+        })
+    </script>
+</body>
+
+</html>
